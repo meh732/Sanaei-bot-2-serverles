@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Sanaei Telegram Bot Dashboard2",
+  "description": "Admin dashboard and server integration with X-UI Sanaei panel, featuring a completely automated Telegram bot for account distribution, subscriptions, and billing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
