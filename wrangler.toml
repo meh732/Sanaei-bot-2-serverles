@@ -1,7 +1,7 @@
 name = "sanaei-bot-worker"
 main = "cloudflare-worker.ts"
 compatibility_date = "2024-03-20"
-node_compat = true
+compatibility_flags = ["nodejs_compat"]
 
 # متغیرهای محیطی که در کلودفلر نیاز داریم
 [vars]
