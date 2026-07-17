@@ -1,4 +1,4 @@
-name = "sanaei-bot-worker"
+name = "sanaeibot2serverles"
 main = "cloudflare-worker.ts"
 compatibility_date = "2024-03-20"
 compatibility_flags = ["nodejs_compat"]
