@@ -253,11 +253,12 @@ export async function initBot() {
     // In this AI Studio Dev environment, Webhooks fail because the URL is protected by Google Auth.
     // So if WEBHOOK_URL is provided (in production), we use it. Otherwise, we fallback to polling (dev only).
     const getEnvVal = (key: string): string | undefined => {
-      if (typeof process !== 'undefined' && process.env && process.env[key]) {
-        return process.env[key];
+      const g = globalThis as any;
+      if (g.process && g.process.env && g.process.env[key]) {
+        return g.process.env[key];
       }
-      if (typeof globalThis !== 'undefined' && (globalThis as any).cfEnv && (globalThis as any).cfEnv[key]) {
-        return (globalThis as any).cfEnv[key];
+      if (g.cfEnv && g.cfEnv[key]) {
+        return g.cfEnv[key];
       }
       return undefined;
     };
