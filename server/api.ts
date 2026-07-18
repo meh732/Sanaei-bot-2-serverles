@@ -1,5 +1,5 @@
+import './polyfill.js';
 import { Hono } from 'hono';
-import process from 'node:process';
 import { db } from './db.js';
 import { initBot, sendBroadcast, checkPaygReactivation, sendDirectMessage, handleTelegramWebhook } from './bot.js';
 import { xui } from './xui.js';

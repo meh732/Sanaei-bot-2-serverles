@@ -1,6 +1,5 @@
+import './polyfill.js';
 import { Buffer } from "node:buffer";
-import process from "node:process";
-(globalThis as any).process = process;
 import TelegramBot from './telegram-shim.js';
 import { db } from './db.js';
 import { xui } from './xui.js';
