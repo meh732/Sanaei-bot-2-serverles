@@ -1,4 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
+import process from 'node:process';
+(globalThis as any).process = process;
 import { v4 as uuidv4 } from 'uuid';
 import { db } from './db.js';
 

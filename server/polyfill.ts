@@ -1,11 +1,11 @@
-// Polyfill for process for libraries that expect it (like axios or uuid)
+import processPolyfill from 'node:process';
+
 const g = globalThis as any;
-if (typeof g.process === 'undefined') {
-  g.process = {
-    env: {},
-    versions: { node: '22.0.0' },
-    nextTick: (cb: Function) => setTimeout(cb, 0),
-    cwd: () => '/',
-  };
+g.process = processPolyfill;
+
+// Ensure env exists and is writable
+if (!g.process.env) {
+  g.process.env = {};
 }
+
 export {};
