@@ -1,3 +1,4 @@
+import './polyfill.js';
 import { Hono } from 'hono';
 import { db } from './db.js';
 import { api } from './api.js';
@@ -26,6 +27,9 @@ export default {
   async fetch(request: Request, env: any, ctx: any) {
     if (typeof globalThis !== 'undefined' && env) {
       (globalThis as any).cfEnv = env;
+      if ((globalThis as any).process && (globalThis as any).process.env) {
+        Object.assign((globalThis as any).process.env, env);
+      }
     }
     // Inject env to Hono
     return app.fetch(request, env, ctx);
@@ -36,6 +40,9 @@ export default {
 export const scheduled = async (event: any, env: any, ctx: any) => {
   if (typeof globalThis !== 'undefined' && env) {
     (globalThis as any).cfEnv = env;
+    if ((globalThis as any).process && (globalThis as any).process.env) {
+      Object.assign((globalThis as any).process.env, env);
+    }
   }
   if (env.DB_KV) {
     await db.initFromKV(env.DB_KV);
