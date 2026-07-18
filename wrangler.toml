@@ -1,17 +1,8 @@
 name = "sanaei-bot-worker"
-main = "cloudflare-worker.ts"
+main = "server/worker.ts"
 compatibility_date = "2024-03-20"
 compatibility_flags = ["nodejs_compat"]
 
-# متغیرهای محیطی که در کلودفلر نیاز داریم
-[vars]
-# توکن ربات را اینجا یا از داشبورد کلودفلر وارد کنید
-# BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
-
-# اتصال به دیتابیس سرورلس کلودفلر (KV)
-# بعد از ساخت KV با دستور زیر، آیدی را اینجا قرار دهید:
-# wrangler kv:namespace create "SANAIE_DB"
-# 
-# [[kv_namespaces]]
-# binding = "SANAIE_DB"
-# id = "YOUR_KV_NAMESPACE_ID"
+[[kv_namespaces]]
+binding = "DB_KV"
+id = "put-your-kv-namespace-id-here"

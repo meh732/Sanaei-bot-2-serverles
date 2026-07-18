@@ -1,5 +1,4 @@
 import axios, { AxiosInstance } from 'axios';
-import https from 'https';
 import { v4 as uuidv4 } from 'uuid';
 import { db } from './db.js';
 
@@ -20,10 +19,6 @@ class XuiClient {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'application/json, text/plain, */*'
       },
-      httpsAgent: new https.Agent({ 
-        rejectUnauthorized: false,
-        keepAlive: true
-      }), // Ignore self-signed certificates
     });
   }
 

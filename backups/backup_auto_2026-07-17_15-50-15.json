@@ -1,0 +1,1444 @@
+{
+  "botToken": "7601764896:AAEoT7VEVDxUF-xnVMpP0QAtIPMnKPdpWlw",
+  "panel": {
+    "url": "https://194.61.3.23:8080/8090/",
+    "username": "7375",
+    "password": "7375",
+    "apiKey": "2sPVP3Wa7C8zTJHlauJgfwS8zxePx29HZkm4ICNXwS5jiQ0y",
+    "inboundId": 11,
+    "inboundIds": [
+      11,
+      1,
+      2
+    ],
+    "subUrlBase": "https://lazem.templatetesti.shop/7070/"
+  },
+  "products": [
+    {
+      "name": "5 گیگ اقتصادی یک ماهه",
+      "price": 25000,
+      "volumeGb": 5,
+      "durationDays": 30,
+      "inboundId": 14,
+      "inboundIds": [
+        14
+      ],
+      "limitIp": 0,
+      "categoryId": "e4b49429-ebe8-427b-8f9b-d2a0fcb16b4e",
+      "id": "8359cebb-2970-466b-b49e-591700cb57bb",
+      "disabled": true
+    },
+    {
+      "name": "10 گیگ اقتصادی یک ماهه",
+      "price": 50000,
+      "volumeGb": 10,
+      "durationDays": 30,
+      "inboundId": 14,
+      "inboundIds": [
+        14
+      ],
+      "limitIp": 0,
+      "categoryId": "e4b49429-ebe8-427b-8f9b-d2a0fcb16b4e",
+      "id": "606375dd-205c-4e2c-a8c1-5b00a95821ff",
+      "disabled": true
+    },
+    {
+      "name": "30 گیگ یک ماهه اقتصادی",
+      "price": 147000,
+      "volumeGb": 30,
+      "durationDays": 30,
+      "inboundId": 14,
+      "inboundIds": [
+        14
+      ],
+      "limitIp": 0,
+      "categoryId": "e4b49429-ebe8-427b-8f9b-d2a0fcb16b4e",
+      "id": "ec411486-05ac-4e74-97e5-2de6ffe5665f",
+      "disabled": true
+    },
+    {
+      "name": "50 گیگ یک ماهه اقتصادی",
+      "price": 230000,
+      "volumeGb": 50,
+      "durationDays": 30,
+      "inboundId": 14,
+      "inboundIds": [
+        14
+      ],
+      "limitIp": 0,
+      "categoryId": "e4b49429-ebe8-427b-8f9b-d2a0fcb16b4e",
+      "id": "be59ede2-eafd-4f44-bd53-8aabff264ffc",
+      "disabled": true
+    },
+    {
+      "name": "100 گیگ یک ماهه اقتصادی",
+      "price": 430000,
+      "volumeGb": 100,
+      "durationDays": 30,
+      "inboundId": 14,
+      "inboundIds": [
+        14
+      ],
+      "limitIp": 0,
+      "categoryId": "e4b49429-ebe8-427b-8f9b-d2a0fcb16b4e",
+      "id": "1fb444ac-a6e6-472f-9d70-4f8d8066ef52",
+      "disabled": true
+    },
+    {
+      "name": "نامحدو یک ماهه اقتصادی",
+      "price": 850000,
+      "volumeGb": 900,
+      "durationDays": 30,
+      "inboundId": 14,
+      "inboundIds": [
+        14
+      ],
+      "limitIp": 1,
+      "categoryId": "e4b49429-ebe8-427b-8f9b-d2a0fcb16b4e",
+      "id": "2c54dbfe-ad96-4116-b24c-08db874ed75b",
+      "disabled": true
+    },
+    {
+      "name": "پرداخت در ازای مصرف  هر گیگ",
+      "price": 10000,
+      "volumeGb": 10,
+      "durationDays": 30,
+      "inboundId": 2,
+      "inboundIds": [
+        2,
+        11,
+        14,
+        21,
+        24,
+        22,
+        23
+      ],
+      "limitIp": 0,
+      "categoryId": "22c6da48-d7a2-4fc9-802d-5a49f9c75be8",
+      "isPayAsYouGo": true,
+      "id": "56a40643-f68a-436c-b6e8-1c1fa389d4c8"
+    },
+    {
+      "name": "1gig-30day",
+      "price": 12000,
+      "volumeGb": 1,
+      "durationDays": 30,
+      "inboundId": 1,
+      "inboundIds": [
+        1,
+        11,
+        21,
+        34,
+        23,
+        33
+      ],
+      "limitIp": 0,
+      "categoryId": "22c6da48-d7a2-4fc9-802d-5a49f9c75be8",
+      "isPayAsYouGo": false,
+      "id": "3716b253-4b90-4fda-9437-126584f6d8ab"
+    },
+    {
+      "name": "5gig-30day",
+      "price": 40900,
+      "volumeGb": 5,
+      "durationDays": 30,
+      "inboundId": 24,
+      "inboundIds": [
+        24,
+        21,
+        22,
+        23,
+        28,
+        2,
+        11,
+        1,
+        34
+      ],
+      "limitIp": 0,
+      "categoryId": "22c6da48-d7a2-4fc9-802d-5a49f9c75be8",
+      "isPayAsYouGo": false,
+      "id": "613f83f5-f169-4a6a-9a69-c291fac32d3a"
+    },
+    {
+      "name": "10gig-30days",
+      "price": 80800,
+      "volumeGb": 10,
+      "durationDays": 30,
+      "inboundId": 24,
+      "inboundIds": [
+        24,
+        11,
+        1,
+        2,
+        22,
+        23,
+        14,
+        33,
+        21,
+        34
+      ],
+      "limitIp": 0,
+      "categoryId": "22c6da48-d7a2-4fc9-802d-5a49f9c75be8",
+      "isPayAsYouGo": false,
+      "id": "a339c904-64ac-465b-adef-01f5925334db"
+    },
+    {
+      "name": "20gig-30days",
+      "price": 158000,
+      "volumeGb": 20,
+      "durationDays": 30,
+      "inboundId": 24,
+      "inboundIds": [
+        24,
+        21,
+        11,
+        1,
+        22,
+        2,
+        23,
+        14,
+        33,
+        28,
+        34
+      ],
+      "limitIp": 0,
+      "categoryId": "22c6da48-d7a2-4fc9-802d-5a49f9c75be8",
+      "isPayAsYouGo": false,
+      "id": "89456220-0f4a-4b05-a234-3b80362436b4"
+    },
+    {
+      "name": "30gig-30days",
+      "price": 235000,
+      "volumeGb": 30,
+      "durationDays": 30,
+      "inboundId": 22,
+      "inboundIds": [
+        22,
+        23,
+        28,
+        21,
+        24,
+        11,
+        1,
+        2,
+        14,
+        33
+      ],
+      "limitIp": 0,
+      "categoryId": "22c6da48-d7a2-4fc9-802d-5a49f9c75be8",
+      "isPayAsYouGo": false,
+      "id": "78b2aae1-2aa0-4fad-9b28-eae7d9d325f6"
+    },
+    {
+      "name": "50gig-30days",
+      "price": 405000,
+      "volumeGb": 50,
+      "durationDays": 30,
+      "inboundId": 24,
+      "inboundIds": [
+        24,
+        21,
+        1,
+        28,
+        23,
+        22,
+        14,
+        2,
+        33,
+        34
+      ],
+      "limitIp": 0,
+      "categoryId": "22c6da48-d7a2-4fc9-802d-5a49f9c75be8",
+      "isPayAsYouGo": false,
+      "id": "7ec84601-73c5-45a2-b2c9-09aae4ab3bf6"
+    }
+  ],
+  "users": [
+    {
+      "chatId": 8230148397,
+      "username": "Faezahmad",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-06T18:26:55.284Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 5706605090,
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-06T18:26:55.289Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 92218108,
+      "username": "mohammadeh7",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-06-06T18:32:24.472Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "test_1780780186998",
+          "name": "تست رایگان (1GB - 3 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/8d719d5136924020",
+          "volumeGb": 1,
+          "durationDays": 3,
+          "createdAt": "2026-06-06T21:09:46.998Z",
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "test_1780780598187",
+          "name": "تست رایگان (1GB - 3 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/76969c4c7f694e02",
+          "volumeGb": 1,
+          "durationDays": 3,
+          "createdAt": "2026-06-06T21:16:38.187Z",
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "test_1780820666972",
+          "name": "تست رایگان (1GB - 3 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/a7122776850b4a15",
+          "volumeGb": 1,
+          "durationDays": 3,
+          "createdAt": "2026-06-07T08:24:26.972Z",
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "purch_1780942705626",
+          "name": "30gig-30days",
+          "price": 235000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/5020a64647d14ec3",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-06-08T18:18:25.626Z",
+          "warnedTime": true
+        },
+        {
+          "id": "purch_1780942932248",
+          "name": "1gig-30day",
+          "price": 12000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/f80eb62ed06341e4",
+          "volumeGb": 1,
+          "durationDays": 30,
+          "createdAt": "2026-06-08T18:22:12.248Z"
+        },
+        {
+          "id": "purch_1781115632333",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/4df0a7af16f04416",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-10T18:20:32.333Z",
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "purch_1781219507324",
+          "name": "5 گیگ اقتصادی یک ماهه",
+          "price": 25000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/1ca4be5176614f69",
+          "volumeGb": 5,
+          "durationDays": 30,
+          "createdAt": "2026-06-11T23:11:47.324Z",
+          "warnedTime": true,
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "purch_1781351783107",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/4625b55ce32c4390",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-13T11:56:23.107Z",
+          "expiredAt": 1783943784912
+        },
+        {
+          "id": "purch_1781351789319",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/d11f4524265e4b18",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-13T11:56:29.319Z",
+          "expiredAt": 1783944084924
+        },
+        {
+          "id": "purch_1781424138166",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/a615431272e34aa8",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-14T08:02:18.166Z",
+          "expiredAt": 1784016385263
+        },
+        {
+          "id": "mohammadeh7_887083",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/6abaf6230c2e4c14",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-18T09:11:27.324Z"
+        },
+        {
+          "id": "mohammadeh7_377226",
+          "name": "20gig-30days",
+          "price": 158000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/2f318efffb524299",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-06-20T07:59:37.722Z"
+        },
+        {
+          "id": "mohammadeh7_994941",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/a6ada3a3264c4867",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-24T11:03:15.178Z"
+        },
+        {
+          "id": "mohammadeh7_042875",
+          "name": "20gig-30days",
+          "price": 158000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/0fd2db1f1f33483c",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-06-27T10:27:23.430Z"
+        },
+        {
+          "id": "mohammadeh7_453238",
+          "name": "5gig-30day",
+          "price": 40900,
+          "subUrl": "https://lazem.templatetesti.shop/7070/2d077c82d32d4a51",
+          "volumeGb": 5,
+          "durationDays": 30,
+          "createdAt": "2026-06-27T10:34:14.066Z"
+        },
+        {
+          "id": "mohammadeh7_134995",
+          "name": "20gig-30days",
+          "price": 158000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/585fb592edec4b49",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-06-28T12:18:56.156Z"
+        },
+        {
+          "id": "mohammadeh7_690917",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/cb0a5b4ef58b45af",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-28T12:44:51.768Z"
+        },
+        {
+          "id": "mohammadeh7_456163",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/fa5ebce66d034ceb",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-30T18:17:38.913Z"
+        },
+        {
+          "id": "mohammadeh7_208092",
+          "name": "20gig-30days",
+          "price": 158000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/941209674f0a45f3",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-07-01T12:50:11.865Z"
+        },
+        {
+          "id": "mohammadeh7_184328",
+          "name": "5gig-30day",
+          "price": 40900,
+          "subUrl": "https://lazem.templatetesti.shop/7070/edd005feac654c7b",
+          "volumeGb": 5,
+          "durationDays": 30,
+          "createdAt": "2026-07-01T13:06:27.379Z"
+        },
+        {
+          "id": "test_1782912522705",
+          "name": "تست رایگان (1GB - 1 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/84f86bb0b7a341fd",
+          "volumeGb": 1,
+          "durationDays": 1,
+          "createdAt": "2026-07-01T13:28:42.705Z",
+          "warnedTime": true
+        },
+        {
+          "id": "mohammadeh7_686589",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/69f1dcc5297d4a6d",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-01T17:08:08.763Z"
+        },
+        {
+          "id": "test_1783160223739",
+          "name": "تست رایگان (1GB - 1 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/d466150262fc4130",
+          "volumeGb": 1,
+          "durationDays": 1,
+          "createdAt": "2026-07-04T10:17:03.739Z",
+          "warnedTime": true,
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "mohammadeh7_365192",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/8e398b6c06f74e06",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-04T19:46:09.571Z"
+        },
+        {
+          "id": "mohammadeh7_052500",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/9677d49ff82e46a5",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-06T13:20:55.577Z"
+        },
+        {
+          "id": "mohammadeh7_928155",
+          "name": "30gig-30days",
+          "price": 235000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/77823c7b89074078",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-07-08T09:28:52.081Z"
+        },
+        {
+          "id": "Babamhossein",
+          "name": "30gig-30days",
+          "price": 235000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/dbd8c1b8103a4da4",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-07-17T11:44:06.836Z",
+          "originalPrice": 235000,
+          "discountPercent": 0,
+          "discountAmount": 0
+        }
+      ],
+      "isSeller": true,
+      "debt": 2344600,
+      "debtVolume": 296,
+      "debtLimit": 10000000,
+      "totalSales": 2344600,
+      "sellerDiscount": 0
+    },
+    {
+      "chatId": 1027209969,
+      "username": "Mohammad_7326",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-06-06T19:44:28.436Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 7314628134,
+      "username": "Ashkanhaji89",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-06-06T20:54:56.231Z",
+      "isSeller": true,
+      "debt": 516200,
+      "debtVolume": 80,
+      "debtLimit": 1000000,
+      "totalSales": 1431060,
+      "purchases": [
+        {
+          "id": "test_1780819745556",
+          "name": "تست رایگان (1GB - 3 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/dc959766ef52481a",
+          "volumeGb": 1,
+          "durationDays": 3,
+          "createdAt": "2026-06-07T08:09:05.556Z",
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "purch_1780900930922",
+          "name": "10 گیگ اقتصادی یک ماهه",
+          "price": 50000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/31ed598530074e51",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-08T06:42:10.922Z",
+          "warnedTime": true,
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "purch_1780932907917",
+          "name": "5 گیگ اقتصادی یک ماهه",
+          "price": 25000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/7b5b52c303084cf0",
+          "volumeGb": 5,
+          "durationDays": 30,
+          "createdAt": "2026-06-08T15:35:07.918Z"
+        },
+        {
+          "id": "purch_1781077533655",
+          "name": "30 گیگ یک ماهه اقتصادی",
+          "price": 147000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/7a1f643b8d514090",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-06-10T07:45:33.655Z",
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "purch_1781186719263",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/9dbcf07a07664776",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-11T14:05:19.263Z"
+        },
+        {
+          "id": "purch_1781250542704",
+          "name": "5gig-30day",
+          "price": 40900,
+          "subUrl": "https://lazem.templatetesti.shop/7070/3784e85c6a414cfb",
+          "volumeGb": 5,
+          "durationDays": 30,
+          "createdAt": "2026-06-12T07:49:02.704Z",
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "purch_1781465496938",
+          "name": "20gig-30days",
+          "price": 158000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/78585bf3375a49b0",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-06-14T19:31:36.938Z",
+          "expiredAt": 1784057514896
+        },
+        {
+          "id": "purch_1781466305618",
+          "name": "1gig-30day",
+          "price": 12000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/38a8c0e9ca9c4030",
+          "volumeGb": 1,
+          "durationDays": 30,
+          "createdAt": "2026-06-14T19:45:05.618Z",
+          "expiredAt": 1784058385145
+        },
+        {
+          "id": "purch_1781467103554",
+          "name": "20gig-30days",
+          "price": 158000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/050a297b386f4575",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-06-14T19:58:23.554Z",
+          "expiredAt": 1784059285146
+        },
+        {
+          "id": "purch_1781614297240",
+          "name": "5 گیگ اقتصادی یک ماهه",
+          "price": 25000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/5a44cd84dc384dc0",
+          "volumeGb": 5,
+          "durationDays": 30,
+          "createdAt": "2026-06-16T12:51:37.240Z",
+          "expiredAt": 1784206515832
+        },
+        {
+          "id": "Ashkanhaji89_703158",
+          "name": "10gig-30days",
+          "price": 72720,
+          "subUrl": "https://lazem.templatetesti.shop/7070/932b1eab1294498d",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-17T20:38:23.396Z"
+        },
+        {
+          "id": "Ashkanhaji89_661613",
+          "name": "10gig-30days",
+          "price": 72720,
+          "subUrl": "https://lazem.templatetesti.shop/7070/153f1382a6724bc9",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-18T09:41:01.754Z"
+        },
+        {
+          "id": "Ashkanhaji89_036771",
+          "name": "10gig-30days",
+          "price": 72720,
+          "subUrl": "https://lazem.templatetesti.shop/7070/8d8dad686ab840ca",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-21T13:53:56.884Z"
+        },
+        {
+          "id": "Ashkanhaji89_719376",
+          "name": "20gig-30days",
+          "price": 158000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/ed4348d556864f86",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-06-28T15:48:39.810Z"
+        },
+        {
+          "id": "Ashkanhaji89_180717",
+          "name": "10gig-30days",
+          "price": 60600,
+          "subUrl": "https://lazem.templatetesti.shop/7070/dab2e0e6909c4c4c",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-04T10:16:22.522Z"
+        },
+        {
+          "id": "Ashkanhaji89_306834",
+          "name": "20gig-30days",
+          "price": 118500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/c98fb894611940d6",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-07-07T15:31:49.426Z"
+        },
+        {
+          "id": "Hadi_ashkan",
+          "name": "10gig-30days",
+          "price": 60600,
+          "subUrl": "https://lazem.templatetesti.shop/7070/b769979fa8ed4cd5",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-13T08:48:02.096Z",
+          "originalPrice": 80800,
+          "discountPercent": 25,
+          "discountAmount": 20200
+        },
+        {
+          "id": "Khodame",
+          "name": "20gig-30days",
+          "price": 118500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/778d33cb13f849f2",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-07-17T12:43:15.965Z",
+          "originalPrice": 158000,
+          "discountPercent": 25,
+          "discountAmount": 39500
+        }
+      ],
+      "sellerDiscounts": [
+        {
+          "type": "global",
+          "targetId": "",
+          "percent": 25
+        }
+      ],
+      "sellerDiscount": 25
+    },
+    {
+      "chatId": -1001218896263,
+      "username": "sdipjh90",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-06-06T22:36:46.343Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "test_1780835988781",
+          "name": "تست رایگان (1GB - 1 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/6e060f04c2d94a29",
+          "volumeGb": 1,
+          "durationDays": 1,
+          "createdAt": "2026-06-07T12:39:48.781Z",
+          "expiredAt": 1783877536095
+        }
+      ]
+    },
+    {
+      "chatId": 607648300,
+      "username": "Hadislt",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-07T08:04:05.421Z",
+      "isSeller": true,
+      "debt": 282824,
+      "debtVolume": 58,
+      "debtLimit": 1000000,
+      "totalSales": 782824,
+      "purchases": [
+        {
+          "id": "Hadislt_390173",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/546d27c48d544d92",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-26T18:09:50.316Z"
+        },
+        {
+          "id": "Hadislt_118605",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/9faa25ef608346c1",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-27T09:55:22.958Z"
+        },
+        {
+          "id": "Hadislt_429251",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/6b2edf2662584ef2",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-28T17:23:49.650Z"
+        },
+        {
+          "id": "Hadislt_747510",
+          "name": "30gig-30days",
+          "price": 235000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/255c7130257a4691",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-06-29T15:09:09.598Z"
+        },
+        {
+          "id": "Hadislt_319335",
+          "name": "10gig-30days",
+          "price": 50904,
+          "subUrl": "https://lazem.templatetesti.shop/7070/c30eb16fb50f4f75",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-29T15:18:39.962Z"
+        },
+        {
+          "id": "Hadislt_798209",
+          "name": "10gig-30days",
+          "price": 50904,
+          "subUrl": "https://lazem.templatetesti.shop/7070/0c40217fd7f24d32",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-02T09:00:02.275Z"
+        },
+        {
+          "id": "Hadislt_301744",
+          "name": "10gig-30days",
+          "price": 50904,
+          "subUrl": "https://lazem.templatetesti.shop/7070/ec9f48af14304697",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-05T14:05:04.900Z"
+        },
+        {
+          "id": "Hadislt_686015",
+          "name": "10gig-30days",
+          "price": 50904,
+          "subUrl": "https://lazem.templatetesti.shop/7070/f92dc33b96f2405a",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-09T13:44:48.401Z"
+        },
+        {
+          "id": "Hadislt_197595",
+          "name": "10gig-30days",
+          "price": 50904,
+          "subUrl": "https://lazem.templatetesti.shop/7070/16dc2a0fe1754e7e",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-11T09:29:59.117Z",
+          "originalPrice": 80800,
+          "discountPercent": 37,
+          "discountAmount": 29896
+        },
+        {
+          "id": "Hadislt_521508",
+          "name": "10gig-30days",
+          "price": 50904,
+          "subUrl": "https://lazem.templatetesti.shop/7070/82b24f1bb4f146df",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-07-12T08:22:04.788Z",
+          "originalPrice": 80800,
+          "discountPercent": 37,
+          "discountAmount": 29896
+        }
+      ],
+      "sellerDiscounts": [
+        {
+          "type": "global",
+          "targetId": "",
+          "percent": 37
+        }
+      ],
+      "sellerDiscount": 10
+    },
+    {
+      "chatId": 5933195056,
+      "username": "Milad281173",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-07T08:27:54.375Z",
+      "referralsMade": 0,
+      "isSeller": true,
+      "debt": 2300940,
+      "debtVolume": 340,
+      "debtLimit": 5000000,
+      "totalSales": 6190940,
+      "purchases": [
+        {
+          "id": "purch_1780821089867",
+          "name": "100 گیگ یک ماهه اقتصادی",
+          "price": 430000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/efe29229f9124bf0",
+          "volumeGb": 100,
+          "durationDays": 30,
+          "createdAt": "2026-06-07T08:31:29.867Z"
+        },
+        {
+          "id": "purch_1780821183691",
+          "name": "نامحدو یک ماهه اقتصادی",
+          "price": 850000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/7050aa441491487d",
+          "volumeGb": 900,
+          "durationDays": 30,
+          "createdAt": "2026-06-07T08:33:03.691Z"
+        },
+        {
+          "id": "purch_1781008459635",
+          "name": "50gig-30days",
+          "price": 405000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/72d61284fa594b2b",
+          "volumeGb": 50,
+          "durationDays": 30,
+          "createdAt": "2026-06-09T12:34:19.635Z",
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "purch_1781167775629",
+          "name": "30gig-30days",
+          "price": 235000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/aef939deca304969",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-06-11T08:49:35.629Z",
+          "warnedTime": false
+        },
+        {
+          "id": "purch_1781167970555",
+          "name": "30gig-30days",
+          "price": 235000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/a0ce459bdf2d4436",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-06-11T08:52:50.555Z",
+          "warnedTime": false
+        },
+        {
+          "id": "purch_1781623184228",
+          "name": "30gig-30days",
+          "price": 235000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/6438416b0cd247d5",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-06-16T15:19:44.228Z",
+          "expiredAt": 1784215215860
+        },
+        {
+          "id": "Milad281173_865745",
+          "name": "30gig-30days",
+          "price": 211500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/d9956690ca5943e3",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-06-19T08:31:05.895Z"
+        },
+        {
+          "id": "Milad281173_999101",
+          "name": "10gig-30days",
+          "price": 72720,
+          "subUrl": "https://lazem.templatetesti.shop/7070/379ec1de29b14c91",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-21T04:59:59.236Z"
+        },
+        {
+          "id": "Milad281173_003119",
+          "name": "10gig-30days",
+          "price": 72720,
+          "subUrl": "https://lazem.templatetesti.shop/7070/a1640f32a55f4bd1",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-21T05:00:03.248Z"
+        },
+        {
+          "id": "Milad281173_092143",
+          "name": "50gig-30days",
+          "price": 364500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/a064fc3fc19843b9",
+          "volumeGb": 50,
+          "durationDays": 30,
+          "createdAt": "2026-06-21T18:21:32.263Z"
+        },
+        {
+          "id": "Milad281173_250125",
+          "name": "50gig-30days",
+          "price": 364500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/e27b875ec35c4ce1",
+          "volumeGb": 50,
+          "durationDays": 30,
+          "createdAt": "2026-06-22T09:40:50.243Z"
+        },
+        {
+          "id": "Milad281173_759557",
+          "name": "50gig-30days",
+          "price": 364500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/4c87c7274ace4121",
+          "volumeGb": 50,
+          "durationDays": 30,
+          "createdAt": "2026-06-23T06:56:01.194Z"
+        },
+        {
+          "id": "Milad281173_190252",
+          "name": "50gig-30days",
+          "price": 364500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/14d690a43c564b80",
+          "volumeGb": 50,
+          "durationDays": 30,
+          "createdAt": "2026-06-24T16:06:30.529Z"
+        },
+        {
+          "id": "Milad281173_828953",
+          "name": "20gig-30days",
+          "price": 142200,
+          "subUrl": "https://lazem.templatetesti.shop/7070/31ef4eef322e485a",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-06-24T17:23:49.107Z"
+        },
+        {
+          "id": "Milad281173_132977",
+          "name": "20gig-30days",
+          "price": 142200,
+          "subUrl": "https://lazem.templatetesti.shop/7070/ee19f1ce636c434a",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-06-27T11:02:13.905Z"
+        },
+        {
+          "id": "Milad281173_619772",
+          "name": "50gig-30days",
+          "price": 364500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/f0fa1aeafb124d06",
+          "volumeGb": 50,
+          "durationDays": 30,
+          "createdAt": "2026-06-28T11:03:43.811Z"
+        },
+        {
+          "id": "Milad281173_105562",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/4fc8c49986534965",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-29T18:35:06.348Z"
+        },
+        {
+          "id": "Milad281173_105852",
+          "name": "10gig-30days",
+          "price": 80800,
+          "subUrl": "https://lazem.templatetesti.shop/7070/d3a18a48dbee4f6b",
+          "volumeGb": 10,
+          "durationDays": 30,
+          "createdAt": "2026-06-29T18:35:07.053Z"
+        },
+        {
+          "id": "Milad281173_140593",
+          "name": "30gig-30days",
+          "price": 235000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/2d02981ee5ea4d2d",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-07-01T19:45:48.808Z"
+        },
+        {
+          "id": "Milad281173_467273",
+          "name": "50gig-30days",
+          "price": 364500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/2284d2f57c964963",
+          "volumeGb": 50,
+          "durationDays": 30,
+          "createdAt": "2026-07-07T08:54:31.540Z"
+        },
+        {
+          "id": "Milad281173_851464",
+          "name": "30gig-30days",
+          "price": 211500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/9611deec25e84c40",
+          "volumeGb": 30,
+          "durationDays": 30,
+          "createdAt": "2026-07-08T17:47:35.348Z"
+        },
+        {
+          "id": "Ebi",
+          "name": "50gig-30days",
+          "price": 364500,
+          "subUrl": "https://lazem.templatetesti.shop/7070/9990c9bb11044bea",
+          "volumeGb": 50,
+          "durationDays": 30,
+          "createdAt": "2026-07-15T21:21:11.774Z",
+          "originalPrice": 405000,
+          "discountPercent": 10,
+          "discountAmount": 40500
+        }
+      ],
+      "sellerDiscount": 10
+    },
+    {
+      "chatId": 5600771536,
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-07T08:35:16.989Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "purch_1780825688812",
+          "name": "100 گیگ یک ماهه اقتصادی",
+          "price": 430000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/5663f757ce81429b",
+          "volumeGb": 100,
+          "durationDays": 30,
+          "createdAt": "2026-06-07T09:48:08.812Z",
+          "warnedTime": true,
+          "expiredAt": 1783877536095
+        }
+      ]
+    },
+    {
+      "chatId": 219909145,
+      "username": "miladezzati95",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-07T08:53:06.956Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 5182219705,
+      "username": "VPNTrader",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-06-08T12:04:39.342Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "test_1781644564880",
+          "name": "تست رایگان (1GB - 1 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/8a392462b39745d8",
+          "volumeGb": 1,
+          "durationDays": 1,
+          "createdAt": "2026-06-16T21:16:04.880Z",
+          "warnedTime": true,
+          "expiredAt": 1783877536095
+        }
+      ]
+    },
+    {
+      "chatId": 41143308,
+      "username": "hamidreza_tf",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-06-11T08:40:09.165Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "test_1781728353470",
+          "name": "تست رایگان (1GB - 1 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/5c8143c677e0467d",
+          "volumeGb": 1,
+          "durationDays": 1,
+          "createdAt": "2026-06-17T20:32:33.470Z",
+          "warnedTime": true,
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "hamidreza_tf_055650",
+          "name": "50 گیگ یک ماهه اقتصادی",
+          "price": 230000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/7ac7f45f1d05452f",
+          "volumeGb": 50,
+          "durationDays": 30,
+          "createdAt": "2026-06-18T10:37:35.752Z",
+          "warnedTime": true
+        }
+      ]
+    },
+    {
+      "chatId": 1065693145,
+      "username": "Zaky_020",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-11T23:04:37.873Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 380058431,
+      "username": "Samiraka1986",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-12T04:27:26.512Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 106367908,
+      "username": "mojtabadarbandi",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-12T05:05:03.606Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 104905272,
+      "username": "Ariancabin_co",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-12T09:59:56.431Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 78821690,
+      "username": "Niloohonarmand",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-06-13T06:58:26.178Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "test_1782034916431",
+          "name": "تست رایگان (1GB - 1 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/28bbebbff09049e3",
+          "volumeGb": 1,
+          "durationDays": 1,
+          "createdAt": "2026-06-21T09:41:56.431Z",
+          "warnedTime": true,
+          "expiredAt": 1783877536095
+        },
+        {
+          "id": "Niloohonarmand_490663",
+          "name": "5gig-30day",
+          "price": 40900,
+          "subUrl": "https://lazem.templatetesti.shop/7070/a6e8c7ac2a4d447c",
+          "volumeGb": 5,
+          "durationDays": 30,
+          "createdAt": "2026-06-21T10:08:10.784Z"
+        }
+      ]
+    },
+    {
+      "chatId": 1610325899,
+      "username": "awmir_hoseini",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-06-13T13:26:02.203Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "test_1781357164801",
+          "name": "تست رایگان (1GB - 1 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/3ea6ec6c8bfe41e9",
+          "volumeGb": 1,
+          "durationDays": 1,
+          "createdAt": "2026-06-13T13:26:04.801Z",
+          "expiredAt": 1783877536095
+        }
+      ]
+    },
+    {
+      "chatId": 6061123369,
+      "username": "Allllfathiii",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-14T08:04:46.605Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 5431407153,
+      "username": "Talalasa",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-15T19:12:36.897Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "purch_1781590136207",
+          "name": "20gig-30days",
+          "price": 158000,
+          "subUrl": "https://lazem.templatetesti.shop/7070/6111df61420749f7",
+          "volumeGb": 20,
+          "durationDays": 30,
+          "createdAt": "2026-06-16T06:08:56.208Z",
+          "warnedTime": true,
+          "expiredAt": 1784182215818
+        }
+      ]
+    },
+    {
+      "chatId": 5251648942,
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-21T12:38:33.708Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 193714621,
+      "username": "mahdid78",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-21T20:08:11.523Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 80659431,
+      "username": "MadMazi",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-06-28T18:38:11.860Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 1141377762,
+      "username": "Elna_9898",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-06-29T13:17:39.687Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "test_1782739098770",
+          "name": "تست رایگان (1GB - 1 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/f5ae4236a2bd4f50",
+          "volumeGb": 1,
+          "durationDays": 1,
+          "createdAt": "2026-06-29T13:18:18.770Z",
+          "warnedTime": true,
+          "expiredAt": 1783877536095
+        }
+      ]
+    },
+    {
+      "chatId": 756084614,
+      "username": "Mahdishaysteh",
+      "balance": 235000,
+      "testUsed": false,
+      "registeredAt": "2026-06-30T11:49:59.143Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 8933580871,
+      "username": "ALIXPRO3",
+      "balance": 0,
+      "testUsed": true,
+      "registeredAt": "2026-07-01T17:12:01.683Z",
+      "referralsMade": 0,
+      "purchases": [
+        {
+          "id": "test_1782925951412",
+          "name": "تست رایگان (1GB - 1 روز)",
+          "price": 0,
+          "subUrl": "https://lazem.templatetesti.shop/7070/3c746d83198c4c2a",
+          "volumeGb": 1,
+          "durationDays": 1,
+          "createdAt": "2026-07-01T17:12:31.412Z",
+          "warnedTime": true,
+          "expiredAt": 1783877536095
+        }
+      ]
+    },
+    {
+      "chatId": 5985764259,
+      "username": "akxdzi",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-07-04T02:35:33.997Z",
+      "referralsMade": 0
+    },
+    {
+      "chatId": 592302912,
+      "username": "HAMNA_ATRP",
+      "balance": 0,
+      "testUsed": false,
+      "registeredAt": "2026-07-07T14:57:45.349Z",
+      "referralsMade": 0
+    }
+  ],
+  "freeTestVolumeGb": 1,
+  "freeTestDurationDays": 1,
+  "freeTestEnabled": true,
+  "adminIds": [
+    92218108
+  ],
+  "referralRewardToman": 7000,
+  "cardNumber": "6219861917828963",
+  "cardHolder": "محمد",
+  "supportUsername": "",
+  "coupons": [
+    {
+      "code": "WORLD CUP 26",
+      "discountPercent": 60,
+      "maxUsage": 10,
+      "maxUsagePerUser": 1,
+      "expirationDate": "2026-06-29T19:45:18.606Z",
+      "usedCount": 0,
+      "usedBy": {}
+    }
+  ],
+  "freeTestInboundIds": [
+    1,
+    11,
+    34
+  ],
+  "freeTestInboundId": 1,
+  "autoBackupIntervalHours": 2,
+  "autoBackupPassword": "2554",
+  "categories": [
+    {
+      "name": "انگلیس vip",
+      "id": "22c6da48-d7a2-4fc9-802d-5a49f9c75be8"
+    },
+    {
+      "name": "فرانسه اقتصادی",
+      "id": "e4b49429-ebe8-427b-8f9b-d2a0fcb16b4e",
+      "disabled": true
+    }
+  ],
+  "lastAutoBackupSent": 1784298717384,
+  "forceJoinEnabled": true,
+  "forceJoinChannels": [
+    {
+      "id": "@matininter",
+      "name": "متین کانفیگ",
+      "url": "https://t.me/matininter"
+    }
+  ],
+  "pendingPayments": []
+}

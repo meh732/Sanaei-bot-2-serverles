@@ -1,9 +1,8 @@
-import TelegramBot from 'node-telegram-bot-api';
+import { Buffer } from "node:buffer";
+import TelegramBot from './telegram-shim.js';
 import { db } from './db.js';
 import { xui } from './xui.js';
 import { encryptData, decryptData } from './crypto.js';
-import fs from 'fs';
-import path from 'path';
 import axios from 'axios';
 import QRCode from 'qrcode';
 
@@ -64,6 +63,43 @@ function getProductButtonText(user: any, p: any): string {
 
 let bot: TelegramBot | null = null;
 let isPolling = false;
+
+let lastInstantBackupTime = 0;
+const INSTANT_BACKUP_COOLDOWN_MS = 5 * 60 * 1000; // 5 minutes to prevent spamming
+db.onStateChange = async () => {
+  if (!bot) return;
+  const state = db.getState();
+  const mainAdmin = state.adminIds?.[0];
+  if (!mainAdmin) return;
+  
+  const now = Date.now();
+  if (now - lastInstantBackupTime < INSTANT_BACKUP_COOLDOWN_MS) {
+    return;
+  }
+  lastInstantBackupTime = now;
+
+  try {
+    const rawData = JSON.stringify(db.getState(), null, 2);
+    let payload = rawData;
+    let isEncrypted = false;
+    if (state.autoBackupPassword && state.autoBackupPassword.trim() !== '') {
+      payload = encryptData(rawData, state.autoBackupPassword.trim());
+      isEncrypted = true;
+    }
+    const backupFileName = `instant_backup_${Date.now()}.json`;
+
+    await bot.sendDocument(mainAdmin, Buffer.from(payload, 'utf8'), {
+      caption: `⚡️ <b>بکاپ فوری ربات</b>\n\nاین بکاپ به دلیل تغییرات جدید در دیتابیس ساخته شده است.\n` + 
+               (isEncrypted ? '🔒 این فایل رمزگذاری شده است.' : '⚠️ این فایل بدون رمز است.'),
+      parse_mode: 'HTML'
+    }, {
+      filename: backupFileName,
+      contentType: 'application/json'
+    });
+  } catch (err: any) {
+    console.error('[Instant Backup Error]', err.message);
+  }
+};
 const adminSession = new Map<number, string>();
 const userSession = new Map<number, { action: string; amount?: number; productId?: string; couponCode?: string }>();
 const purchaseLocks = new Set<number>();
@@ -82,8 +118,8 @@ async function sendServiceInfo(chatId: number, purchase: any) {
     const buffer = await QRCode.toBuffer(purchase.subUrl, { width: 400 });
     let subContent = '';
     try {
-      const resp = await axios.get(purchase.subUrl, { timeout: 4000 });
-      const text = resp.data;
+      const resp = await fetch(purchase.subUrl, { signal: AbortSignal.timeout(4000) }); const text = await resp.text();//
+      //const text = resp.data;
       if (typeof text === 'string') {
         try {
           const decoded = Buffer.from(text, 'base64').toString('utf-8');
@@ -213,20 +249,25 @@ export async function initBot() {
   try {
     console.log(`[Bot] Initializing Telegram Bot with token ending in ...${state.botToken.substring(state.botToken.length - 8 || 0)}`);
     
-    const webhookUrl = process.env.APP_URL ? `${process.env.APP_URL}/api/webhook/telegram` : null;
-    const usePolling = !webhookUrl;
+    // For Serverless environments (Cloud Run, Vercel, etc), you MUST use Webhooks.
+    // In this AI Studio Dev environment, Webhooks fail because the URL is protected by Google Auth.
+    // So if WEBHOOK_URL is provided (in production), we use it. Otherwise, we fallback to polling (dev only).
+    const webhookDomain = process.env.WEBHOOK_URL || process.env.APP_URL;
+    const usePolling = !webhookDomain;
     
     bot = new TelegramBot(state.botToken, { polling: usePolling });
     isPolling = usePolling;
 
-    if (!usePolling && webhookUrl) {
-      bot.setWebHook(webhookUrl).then(() => {
-        console.log(`[Bot] Webhook successfully set to ${webhookUrl}`);
+    if (!usePolling && webhookDomain) {
+      const fullWebhookUrl = `${webhookDomain}/api/webhook/telegram`;
+      bot.setWebHook(fullWebhookUrl).then(() => {
+        console.log(`[Bot] Webhook successfully set to ${fullWebhookUrl}`);
       }).catch(err => {
         console.error('[Bot Error] Failed to set Webhook:', err.message || err);
       });
     } else {
-      console.log(`[Bot] Polling mode enabled (No APP_URL provided for webhook).`);
+      console.log(`[Bot] Polling mode enabled (No WEBHOOK_URL provided. Use this ONLY for dev. Webhooks required for serverless!).`);
+      bot.deleteWebHook().catch(() => {});
     }
 
     // Attach crucial error listeners to avoid crashing or unhandled rejections
@@ -1520,21 +1561,17 @@ export async function initBot() {
         const backupPassword = text.trim();
         bot!.sendMessage(chatId, '⏳ در حال ساخت فایل پشتیبان رمزگذاری شده...');
         try {
-          const rawData = fs.readFileSync(path.join(process.cwd(), 'db.json'), 'utf8');
+          const rawData = JSON.stringify(db.getState(), null, 2);
           const encryptedPayload = encryptData(rawData, backupPassword);
           const backupFileName = `sanaei_backup_${Date.now()}.json`;
-          const backupPath = path.join(process.cwd(), backupFileName);
           
-          fs.writeFileSync(backupPath, encryptedPayload, 'utf8');
-          
-          await bot!.sendDocument(chatId, backupPath, {
+          await bot!.sendDocument(chatId, Buffer.from(encryptedPayload, 'utf8'), {
             caption: `📥 فایل بکاپ رمزگذاری شده با موفقیت تولید شد.\n\n🔑 رمز فایل بکاپ شما: *${backupPassword}*\n\n⚠️ حتما این فایل و رمز را در جایی مطمئن یادداشت و نگهداری کنید. جهت بازیابی اطلاعات، کافیست همین فایل .json را به ربات ارسال فرمایید.`,
             parse_mode: 'Markdown'
+          }, {
+            filename: backupFileName,
+            contentType: 'application/json'
           });
-          
-          try {
-            fs.unlinkSync(backupPath);
-          } catch (e) {}
         } catch (err: any) {
           bot!.sendMessage(chatId, `❌ خطا در ایجاد فایل پشتیبان: ${err.message}`);
         }
@@ -1548,9 +1585,9 @@ export async function initBot() {
         try {
           const file = await bot!.getFile(fileId);
           const dUrl = `https://api.telegram.org/file/bot${state.botToken}/${file.file_path}`;
-          const res = await axios.get(dUrl);
+          const res = await fetch(dUrl); let fileData = await res.json();//
           
-          let fileData = res.data;
+          //let fileData = res.data;
           if (typeof fileData === 'object') {
             fileData = JSON.stringify(fileData);
           }
@@ -1562,8 +1599,6 @@ export async function initBot() {
             throw new Error('محتوای فایل معتبر نمی‌باشد.');
           }
           
-          const dbPath = path.join(process.cwd(), 'db.json');
-          fs.writeFileSync(dbPath, JSON.stringify(parsed, null, 2), 'utf8');
           db.updateState(parsed);
           
           bot!.sendMessage(chatId, '✅ بازیابی کامل اطلاعات با موفقیت انجام شد! تمامی کاربران، محصولات، تراکنش‌ها، کانکشن پنل سنایی و تنظیمات ربات با موفقیت جایگذاری و دیتابیس همگام شد. 🎉');
@@ -2689,8 +2724,10 @@ export async function initBot() {
     }
   });
 
-  // Start auto-backup worker
-  setInterval(async () => {
+  }
+
+// Start auto-backup worker
+  export const runAutoBackup = async () => {
     try {
       const state = db.getState();
       const intervalHours = state.autoBackupIntervalHours || 0;
@@ -2702,7 +2739,7 @@ export async function initBot() {
         if (now - lastSent >= intervalMs) {
            // Time to send backup
            const mainAdmin = state.adminIds[0]; // first admin
-           const rawData = fs.readFileSync(path.join(process.cwd(), 'db.json'), 'utf8');
+           const rawData = JSON.stringify(db.getState(), null, 2);
            
            let payload = rawData;
            let isEncrypted = false;
@@ -2712,32 +2749,31 @@ export async function initBot() {
            }
 
            const backupFileName = `auto_backup_${Date.now()}.json`;
-           const backupPath = path.join(process.cwd(), backupFileName);
-           fs.writeFileSync(backupPath, payload, 'utf8');
            
            if (bot) {
-             await bot.sendDocument(mainAdmin, backupPath, {
+             await bot.sendDocument(mainAdmin, Buffer.from(payload, 'utf8'), {
                caption: `🔄 <b>بکاپ خودکار ربات</b>\n\n` +
                         `این بکاپ طبق زمان‌بندی ${intervalHours} ساعته توسط سیستم ساخته و ارسال شده است.\n` +
                         (isEncrypted ? '🔒 این فایل با رمز عبور تعیین شده توسط شما رمزگذاری شده است. جهت استفاده در ری‌استور به آن نیاز خواهید داشت.\n' : '⚠️ این فایل رمزگذاری نشده است. برای امنیت بیشتر رمز بکاپ خودکار را تنظیم کنید.\n') +
                         `برای تغییر زمان‌بندی از طریق منوی مدیریت بخش "تنظیمات بکاپ خودکار" اقدام نمایید.`,
                parse_mode: 'HTML'
+             }, {
+               filename: backupFileName,
+               contentType: 'application/json'
              });
              db.updateState({ lastAutoBackupSent: now });
            }
-           
-           try {
-             fs.unlinkSync(backupPath); // clean up temp file
-           } catch (e) {}
         }
       }
     } catch (e: any) {
       console.error('[Backup Check Worker Error]', e.message);
     }
-  }, 10 * 60 * 1000); // Check every 10 minutes
+  };
+
+// End AutoBackup
 
   // Start limit check worker Let's check every 30 minutes
-  setInterval(async () => {
+  export const runLimitCheck = async () => {
     try {
       const state = db.getState();
       const inboundsList = await xui.getInbounds();
@@ -2893,8 +2929,8 @@ export async function initBot() {
     } catch (e: any) {
         console.error('[Limit Check Worker Error]', e.message);
     }
-  }, 5 * 60 * 1000); // Check every 5 minutes
-}
+  };
+
 
 export async function checkPaygReactivation(user: any) {
   if (!user || user.balance <= 0 || !user.purchases) return;

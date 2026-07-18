@@ -1,4 +1,5 @@
-import crypto from 'crypto';
+import { Buffer } from "node:buffer";
+import crypto from 'node:crypto';
 
 /**
  * Encrypts a string using AES-256-CBC with a user-provided password
