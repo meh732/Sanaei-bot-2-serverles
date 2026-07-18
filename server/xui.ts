@@ -1,7 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import { db } from './db.js';
-import process from 'node:process';
 
 class XuiClient {
   private client: AxiosInstance;
@@ -13,8 +12,10 @@ class XuiClient {
   private lastPanelApiKey: string = '';
 
   constructor() {
-    if (process && process.env) {
-      process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+    const g = globalThis as any;
+    const proc = g['process'];
+    if (proc && proc['env']) {
+      proc['env']['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
     }
     this.client = axios.create({
       timeout: 15000,
