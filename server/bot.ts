@@ -254,10 +254,6 @@ export async function initBot() {
     // So if WEBHOOK_URL is provided (in production), we use it. Otherwise, we fallback to polling (dev only).
     const getEnvVal = (key: string): string | undefined => {
       const g = globalThis as any;
-      const proc = g['process'];
-      if (proc && proc['env'] && proc['env'][key]) {
-        return proc['env'][key];
-      }
       if (g.cfEnv && g.cfEnv[key]) {
         return g.cfEnv[key];
       }

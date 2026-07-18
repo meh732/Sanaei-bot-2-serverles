@@ -12,11 +12,6 @@ class XuiClient {
   private lastPanelApiKey: string = '';
 
   constructor() {
-    const g = globalThis as any;
-    const proc = g['process'];
-    if (proc && proc['env']) {
-      proc['env']['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-    }
     this.client = axios.create({
       timeout: 15000,
       headers: {
