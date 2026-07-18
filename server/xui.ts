@@ -13,8 +13,9 @@ class XuiClient {
 
   constructor() {
     const g = globalThis as any;
-    if (g.process && g.process.env) {
-      g.process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+    const processObj = g.process;
+    if (processObj && processObj.env) {
+      processObj.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
     }
     this.client = axios.create({
       timeout: 15000,
