@@ -1,4 +1,7 @@
 import './polyfill.js';
+import * as nodeProcess from 'node:process';
+const process = (nodeProcess as any).default || nodeProcess;
+(globalThis as any).process = process;
 import { Buffer } from "node:buffer";
 import TelegramBot from './telegram-shim.js';
 import { db } from './db.js';

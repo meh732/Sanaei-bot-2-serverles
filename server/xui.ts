@@ -1,10 +1,12 @@
-import './polyfill.js';
+import * as nodeProcess from 'node:process';
+const process = (nodeProcess as any).default || nodeProcess;
+(globalThis as any).process = process;
 import axios, { AxiosInstance } from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import { db } from './db.js';
 
 class XuiClient {
-  private client: AxiosInstance;
+  private _client: AxiosInstance | null = null;
   private cookie: string = '';
   private workingApiPrefix: string = '';
   private lastPanelUrl: string = '';
@@ -12,15 +14,20 @@ class XuiClient {
   private lastPanelPass: string = '';
   private lastPanelApiKey: string = '';
 
-  constructor() {
-    this.client = axios.create({
-      timeout: 15000,
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'application/json, text/plain, */*'
-      },
-    });
+  private get client(): AxiosInstance {
+    if (!this._client) {
+      this._client = axios.create({
+        timeout: 15000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'application/json, text/plain, */*'
+        },
+      });
+    }
+    return this._client;
   }
+
+  constructor() {}
 
   private async getAuthOptions(panelOverride?: any) {
     const state = db.getState();

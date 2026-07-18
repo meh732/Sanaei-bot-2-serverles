@@ -1,4 +1,7 @@
 import './polyfill.js';
+import * as nodeProcess from 'node:process';
+const process = (nodeProcess as any).default || nodeProcess;
+(globalThis as any).process = process;
 import { Hono } from 'hono';
 import { db } from './db.js';
 import { initBot, sendBroadcast, checkPaygReactivation, sendDirectMessage, handleTelegramWebhook } from './bot.js';
