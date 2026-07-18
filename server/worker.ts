@@ -24,6 +24,9 @@ app.route('/api', api);
 
 export default {
   async fetch(request: Request, env: any, ctx: any) {
+    if (typeof globalThis !== 'undefined' && env) {
+      (globalThis as any).cfEnv = env;
+    }
     // Inject env to Hono
     return app.fetch(request, env, ctx);
   }
@@ -31,6 +34,9 @@ export default {
 
 // Add scheduled event handler for Cloudflare Workers
 export const scheduled = async (event: any, env: any, ctx: any) => {
+  if (typeof globalThis !== 'undefined' && env) {
+    (globalThis as any).cfEnv = env;
+  }
   if (env.DB_KV) {
     await db.initFromKV(env.DB_KV);
   }

@@ -252,7 +252,16 @@ export async function initBot() {
     // For Serverless environments (Cloud Run, Vercel, etc), you MUST use Webhooks.
     // In this AI Studio Dev environment, Webhooks fail because the URL is protected by Google Auth.
     // So if WEBHOOK_URL is provided (in production), we use it. Otherwise, we fallback to polling (dev only).
-    const webhookDomain = process.env.WEBHOOK_URL || process.env.APP_URL;
+    const getEnvVal = (key: string): string | undefined => {
+      if (typeof process !== 'undefined' && process.env && process.env[key]) {
+        return process.env[key];
+      }
+      if (typeof globalThis !== 'undefined' && (globalThis as any).cfEnv && (globalThis as any).cfEnv[key]) {
+        return (globalThis as any).cfEnv[key];
+      }
+      return undefined;
+    };
+    const webhookDomain = getEnvVal('WEBHOOK_URL') || getEnvVal('APP_URL');
     const usePolling = !webhookDomain;
     
     bot = new TelegramBot(state.botToken, { polling: usePolling });
