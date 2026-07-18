@@ -3,17 +3,18 @@ import { db } from './db.js';
 import { api } from './api.js';
 import { initBot } from './bot.js';
 
-const app = new Hono();
+const app = new Hono<{ Bindings: { DB_KV: any } }>();
 
 app.use('*', async (c, next) => {
-  if (c.env.DB_KV) {
-    await db.initFromKV(c.env.DB_KV);
+  const env = c.env as any;
+  if (env && env.DB_KV) {
+    await db.initFromKV(env.DB_KV);
   }
   
   await next();
   
-  if (c.env.DB_KV) {
-    await db.flushToKV(c.env.DB_KV);
+  if (env && env.DB_KV) {
+    await db.flushToKV(env.DB_KV);
   }
 });
 
@@ -22,14 +23,14 @@ app.get('/', (c) => c.text('Bot is running on Cloudflare Workers!'));
 app.route('/api', api);
 
 export default {
-  async fetch(request: Request, env: any, ctx: ExecutionContext) {
+  async fetch(request: Request, env: any, ctx: any) {
     // Inject env to Hono
     return app.fetch(request, env, ctx);
   }
 };
 
 // Add scheduled event handler for Cloudflare Workers
-export const scheduled = async (event: any, env: any, ctx: ExecutionContext) => {
+export const scheduled = async (event: any, env: any, ctx: any) => {
   if (env.DB_KV) {
     await db.initFromKV(env.DB_KV);
   }
