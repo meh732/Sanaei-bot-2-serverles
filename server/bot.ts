@@ -1,4 +1,5 @@
 import { Buffer } from "node:buffer";
+import process from "node:process";
 import TelegramBot from './telegram-shim.js';
 import { db } from './db.js';
 import { xui } from './xui.js';
@@ -253,10 +254,10 @@ export async function initBot() {
     // In this AI Studio Dev environment, Webhooks fail because the URL is protected by Google Auth.
     // So if WEBHOOK_URL is provided (in production), we use it. Otherwise, we fallback to polling (dev only).
     const getEnvVal = (key: string): string | undefined => {
-      const g = globalThis as any;
-      if (g.process && g.process.env && g.process.env[key]) {
-        return g.process.env[key];
+      if (process && process.env && process.env[key]) {
+        return process.env[key];
       }
+      const g = globalThis as any;
       if (g.cfEnv && g.cfEnv[key]) {
         return g.cfEnv[key];
       }
